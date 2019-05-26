@@ -1,0 +1,25 @@
+body {
+    box-sizing: border-box;
+    position:relative;
+}
+
+.container {
+    top:0;
+    left:0;
+    text-align: center;
+}
+
+.logo-row {
+    margin-top:10%;
+}
+
+.mid-col {
+    text-align: center;
+}
+
+.button-row {
+    margin-top: 8%;
+}
+
+
+
