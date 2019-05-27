@@ -3,11 +3,14 @@ $(document).ready(function() {
 var audioElement = document.createElement("audio");
 audioElement.setAttribute("src", "assets/music/pokemon-song.MP3");
 $(".btn-start").on("click", function() {
-    $(".loading-screen").fadeIn();
     $(".main-screen").fadeOut();
+    $(".loading-screen").fadeIn();
+    $(".loading-screen").delay(5000).fadeOut();
+    $(".character-screen").delay(7000).fadeIn();
     audioElement.play();
 });
 });
+
 
 
 
