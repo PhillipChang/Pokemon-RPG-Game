@@ -2,10 +2,9 @@
 $(document).ready(function() {
 var audioElement = document.createElement("audio");
 audioElement.setAttribute("src", "assets/music/pokemon-song.MP3");
-$(".btn").on("click", function() {
-    $(".sec-2").fadeIn();
-    $(".sec-1").fadeOut();
-    $(".sec-3").fadeOut();
+$(".btn-start").on("click", function() {
+    $(".loading-screen").fadeIn();
+    $(".main-screen").fadeOut();
     audioElement.play();
 });
 });
