@@ -11,6 +11,16 @@ $(".btn-start").on("click", function() {
 });
 });
 
+$(document).ready(function() {
+var audioElement = document.createElement("audio");
+audioElement.setAttribute("src", "assets/music/battle-song.MP3");
+$(".btn-battle").on("click", function() {
+    $(".character-screen").fadeOut();
+    $(".battle-screen").fadeIn();
+    audioElement.play();
+});
+});
+
 
 
 
