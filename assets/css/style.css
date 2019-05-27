@@ -21,5 +21,23 @@ body {
     margin-top: 8%;
 }
 
+/* Loading screen */
+.loading-row {
+    text-align: center;
+}
+
+.sec-2 {
+    display:none;
+    position: absolute;
+    margin: 20% 30%;
+}
+
+.progress {
+    text-align: center;
+}
+
+.walk-pika {
+    width:10%;
+}
 
 

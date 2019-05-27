@@ -12,9 +12,6 @@
     <!-- Bootstrap Library -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
-    <!-- jQuery Library -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-
     <link rel="shortcut icon" type="image/png" href="https://www.freepngimg.com/download/pokemon/20148-3-pokeball-file.png">
     <title>Pokemon RPG Game</title>
 </head>
@@ -22,14 +19,40 @@
     <div class="grid">
         <div class="row"></div>
         <div class="row"></div>
+        <section class="sec-1">
         <div class="row logo-row">
            <div class="col-md-12">
                    <div class="container">
                        <img src="assets/images/pokemon-logo.gif" alt="pokemon-logo">
                     </div>
-                </div>
-            </div> 
-        
+            </div>
+        </div>
+        </section>
+
+        <section class="sec-2"> 
+        <div class="row loading-row">
+            <div class="col-md-12">
+                    <div class="row progress">
+                        <div class="col-md-4"></div>
+                        <div class="progress col-md-4">
+                                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" style="width: 120%" aria-valuenow="100" aria-valuemin="100" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                   
+                        <div class="row pic-row">
+                            <div class="col-md-12">
+                                <img src="assets/images/walking-pikachu.gif" class="walk-pika" alt="walking-pikachu">
+                                <img src="assets/images/walking-pikachu.gif" class="walk-pika" alt="walking-pikachu">
+                                <img src="assets/images/walking-pikachu.gif" class="walk-pika" alt="walking-pikachu">
+                                <img src="assets/images/walking-pikachu.gif" class="walk-pika" alt="walking-pikachu">
+                                <img src="assets/images/walking-pikachu.gif" class="walk-pika" alt="walking-pikachu">
+                            </div>
+                        </div>
+            </div>
+        </div>
+        </section>
+
+        <section class="sec-3">
         <div class="row button-row">
             <div class="col-md-4"></div>
             <div class="col-md-4 mid-col">
@@ -37,6 +60,7 @@
             </div>
             <div class="col-md-4"></div>
         </div>
+        </section>
 
     </div>
               
@@ -51,5 +75,10 @@
 
 <!-- Game JavaScript -->
     <script src="assets/javascript/game.js"></script>
+
+<!-- jQuery Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    
 </body>
 </html>
