@@ -1,12 +1,16 @@
 $(document).ready(function() {
 var userHp;
 var userAtk;
-var userDef;
 var enemyHp;
 var enemyAtk;
 var enemyDef;
 var userChose = 0;
 var user;
+var enemy;
+var win = 0;
+var enemiesDefeated = 0;
+var losses = 0;
+var attack;
 
 // Main Page
 var audioElement = document.createElement("audio");
@@ -61,9 +65,47 @@ $(".character").on("click",function(){
        enemyAtk = $(this).attr('data-attack');
        enemyDef = $(this).attr('data-defend');
        $(this).appendTo(".defender");
+       $(this).addClass("enemy");
        $(".btn-attack").on('click', attack);
    }
 })
+
+function attack(){
+userAtk = parseInt(userAtk);
+userHp = parseInt(userHp);
+enemyHp = parseInt(enemyHp);
+enemyAtk = parseInt(enemyAtk);
+
+userHp -= enemyDef;
+enemyHp -= userAtk;
+// add new variable to useratk
+if (enemyHp <= 0) {
+    $(".enemy").remove();
+    userChose = 1;
+    enemiesDefeated++;
+    enemyHp = 0;
+    enemyAtk = 0;
+    enemyDef = 0;
+}
+
+if (enemiesDefeated == 3 ) {
+    $(".result").html("You have defeated all of the trainer's pokemon! You are the pokemon master!");
+    win++;
+}
+$(".enemy-hp").html(enemyHp);
+console.log(userHp);
+$(".user-hp").html(userHp);
+
+
+$(".result").html(" " +user +" did " +userAtk +" damage to " +enemy +". "+enemy +" counter " +enemyDef +" damage to " +user);
+
+console.log(userHp);
+if (userHp <= 0) {
+    $(".btn-attack").off("click");
+    $(".result").html("You Lost! Better luck next time!");
+    losses++;
+}
+}
 
 var audioElement = document.createElement("audio");
 audioElement.setAttribute("src", "assets/music/battle-song.MP3");

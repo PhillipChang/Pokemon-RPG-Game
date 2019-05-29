@@ -78,7 +78,7 @@
                                 <div class="card-header bg-transparent border-0">Pikachu</div>
                                 <div class="card-body text-success">
                                   <h5 class="card-title">
-                                      <img src="assets/images/pikachu-2.png" value="0" alt="pikachu">
+                                      <img src="assets/images/pikachu.png" value="0" alt="pikachu">
                                   </h5>
                                 </div>
                                 <footer>120</footer>
@@ -102,7 +102,7 @@
                                 <div class="card-header bg-transparent border-0">Charmander</div>
                                 <div class="card-body text-success">
                                   <h5 class="card-title">
-                                      <img src="assets/images/charmander-3.png" class="pokemon" id="charmander" value="2" alt="charmander">
+                                      <img src="assets/images/charmander.png" class="pokemon" id="charmander" value="2" alt="charmander">
                                   </h5>
                                 </div>
                                 <footer>100</footer>
@@ -114,7 +114,7 @@
                                 <div class="card-header bg-transparent border-0">Mewtwo</div>
                                 <div class="card-body text-success">
                                   <h5 class="card-title">
-                                      <img src="assets/images/mewtwo-2.png" value="3" alt="mewtwo">
+                                      <img src="assets/images/mewtwo.png" value="3" alt="mewtwo">
                                   </h5>
                                 </div>
                                 <footer>150</footer>
@@ -172,16 +172,22 @@
                 <h3>Your Pokemon</h3>
                 <p class="user-hp"></p>
             </div>
-                    <div class="col-md-6 defender">
-                        <h3>Defender</h3>
-                        <p class="enemy-hp"></p>
+                <div class="col-md-6 ">
+                    <h3>Defender</h3>
+                    <p class="enemy-hp"></p>
+                    <div class="defender">
                     </div>
-                    <div class="enemy-hp"></div> 
+                </div> 
         </div>
 
         <div class="row">
                 <div class="col-md-6">
-                    <h3 class="enemy-pokemon-health">Results</h3>
+                    <h3>Results</h3>
+                    <div class="row">
+                            <div class="col-md-4">
+                                <h3 class="result">#placeholder</h3>
+                            </div>
+                        </div>
                 </div> 
             <div class="col-md-6">
                 <h3>Enemies Left to Attack</h3>
@@ -205,11 +211,6 @@
             <div class="col-md-4"></div>
             <div class="col-md-4">
                 <button type="button" class="btn-attack btn-danger btn-lg">Attack!</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <h3 class="result">#placeholder</h3>
             </div>
         </div>
     </section>    
