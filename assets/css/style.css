@@ -1,7 +1,10 @@
 body {
     box-sizing: border-box;
     position:relative;
+    /* background-image: url("../images/background.gif"); */
 }
+/* .grid {
+} */
 
 .container {
     top:0;
@@ -26,7 +29,7 @@ body {
     text-align: center;
 }
 
-.sec-2 {
+.loading-screen {
     display:none;
     position: absolute;
     margin: 20% 30%;
@@ -46,11 +49,16 @@ body {
 
 /* Character Select Screen */
 
-.characters {
+.character-screen {
+    display:none;
+}
+
+img {
     width:100%;
 }
 
-.character-select 
+/* Battle Screen */
 
-
-
+.battle-screen {
+    display:none;
+}

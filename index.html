@@ -21,7 +21,7 @@
         <div class="row"></div>
 
         <!-- Logo -->
-        <!-- <section class="main-screen">
+        <section class="main-screen">
         <div class="row logo-row">
            <div class="col-md-12">
                    <div class="container">
@@ -29,10 +29,10 @@
                     </div>
             </div>
         </div>
-        </section> -->
+        </section>
 
         <!-- Loading Bar -->
-        <!-- <section class="loading-screen"> 
+        <section class="loading-screen"> 
         <div class="row loading-row">
             <div class="col-md-12">
                     <div class="row">
@@ -56,10 +56,10 @@
                         </div>
             </div>
         </div>
-        </section> -->
+        </section>
 
         <!-- Start button -->
-        <!-- <section class="main-screen">
+        <section class="main-screen">
         <div class="row button-row">
             <div class="col-md-4"></div>
             <div class="col-md-4 mid-col">
@@ -67,78 +67,93 @@
             </div>
             <div class="col-md-4"></div>
         </div>
-        </section> -->
+        </section>
 
         <!-- Character Select -->
-        <!-- <section class="character-screen">
+        <section class="character-screen">
             <div class="row character-select">
+                    
+                    <section class="character" id="pikachu" data-health="120" data-attack="25" data-defend="10">
                         <div class="card border-0 ml-4 mb-3" style="max-width: 9rem;">
                                 <div class="card-header bg-transparent border-0">Pikachu</div>
                                 <div class="card-body text-success">
                                   <h5 class="card-title">
-                                      <img src="assets/images/pikachu-2.png" class="characters pikachu" alt="pikachu">
+                                      <img src="assets/images/pikachu-2.png" value="0" alt="pikachu">
                                   </h5>
                                 </div>
                                 <footer>120</footer>
                         </div>
-                
+                    </section>
                     
-                            <div class="card border-0" style="max-width: 9rem;">
+                    <section  class= "character" id="squirtle" data-health="100" data-attack="20" data-defend="15">
+                            <div class="card border-0 ml-4 mb-3" style="max-width: 9rem;">
                                     <div class="card-header bg-transparent border-0">Squirtle</div>
                                     <div class="card-body text-success">
                                         <h5 class="card-title">
-                                            <img src="assets/images/squirtle.png" class="characters squirtle" alt="squirtle">
+                                            <img src="assets/images/squirtle.png" value="1" alt="squirtle">
                                         </h5>
                                     </div>
                                     <footer>100</footer>
-                                </div>
+                             </div>
+                    </section>
                         
+                    <section class= "character" id ="charmander" data-health="100" data-attack="15" data-defend="25">
                         <div class="card border-0" style="max-width: 9rem;">
                                 <div class="card-header bg-transparent border-0">Charmander</div>
                                 <div class="card-body text-success">
                                   <h5 class="card-title">
-                                      <img src="assets/images/charmander-3.png" class="characters charmander" alt="charmander">
+                                      <img src="assets/images/charmander-3.png" class="pokemon" id="charmander" value="2" alt="charmander">
                                   </h5>
                                 </div>
                                 <footer>100</footer>
                         </div>
+                    </section>
+
+                    <section  class= "character" id="mewtwo" data-health="150" data-attack="30" data-defend="10">
                         <div class="card border-0" style="max-width: 9rem;">
                                 <div class="card-header bg-transparent border-0">Mewtwo</div>
                                 <div class="card-body text-success">
                                   <h5 class="card-title">
-                                      <img src="assets/images/mewtwo-2.png" class="characters" alt="mewtwo">
+                                      <img src="assets/images/mewtwo-2.png" value="3" alt="mewtwo">
                                   </h5>
                                 </div>
                                 <footer>150</footer>
-                        </div>
-                    </div> -->
+                            </div>
+                        </section>
+                    
+                </div>
 
             <!-- User Character -->
-            <!-- <div class="row">
+            <div class="row">
                 <div class="col-md-12">
                     <h2>Your Character</h2>
                     <div class="row">
-                        <div class="col-md-2 user-char">
+                        <div class="col-md-4 user-char">
 
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
             <!-- Enemies to Attack -->
-            <!-- <div class="row">
+            <div class="row">
                     <div class="col-md-12">
                         <h2>Enemies Available to Attack</h2>
+                    </div>
+                </div>
                         <div class="row">
-                            <div class="col-md-2 comp-char">
-    
+                            <div class="col-md-2 comp-char-1">
+                            </div>
+                            <div class="col-md-2 comp-char-2">
+                                
+                            </div>
+                            <div class="col-md-2 comp-char-3">
+                                
                             </div>
                         </div>
-                    </div>
-                </div> -->
 
         <!-- Battle Button -->
-        <!-- <section class="battle">
+        <section class="battle">
         <div class="row battle-button">
             <div class="col-md-4"></div>
             <div class="col-md-4">
@@ -148,38 +163,44 @@
         </div>
         </section>
                 
-    </section> -->
+    </section>
 
     <!-- Battle Screen -->
     <section class="battle-screen">
         <div class="row">
-            <div class="col-md-6">
-                <h3 class="user-pokemon-name">#placeholder</h3>
+            <div class="col-md-6 user-char">
+                <h3>Your Pokemon</h3>
+                <p class="user-hp"></p>
             </div>
-            <div class="col-md-6">
-                <h3 class="enemy-pokemon-name">#placeholder</h3>
-            </div>
+                    <div class="col-md-6 defender">
+                        <h3>Defender</h3>
+                        <p class="enemy-hp"></p>
+                    </div>
+                    <div class="enemy-hp"></div> 
         </div>
+
         <div class="row">
+                <div class="col-md-6">
+                    <h3 class="enemy-pokemon-health">Results</h3>
+                </div> 
             <div class="col-md-6">
-                <h3 class="user-pokemon-image">#placeholder</h3>
+                <h3>Enemies Left to Attack</h3>
+                <div class="row">
+                        <div class="col-md-2 comp-char-1" style="max-width:9rem;">
+                        </div>
+                        <div class="col-md-2 comp-char-2">
+                            
+                        </div>
+                        <div class="col-md-2 comp-char-3">
+                            
+                        </div>
+                    </div>
             </div>
-            <div class="col-md-6">
-                <h3 class="enemy-pokemon-image">#placeholder</h3>
-            </div>    
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <h3 class="user-pokemon-health">#placeholder</h3>
-            </div>
-            <div class="col-md-6">
-                <h3 class="enemy-pokemon-health">#placeholder</h3>
-            </div> 
-        </div>
-    </section>
+   
   
     <!-- Attack Button -->
-    <section class="attack">
+    <section class="battle-screen">
         <div class="row attack-button">
             <div class="col-md-4"></div>
             <div class="col-md-4">
@@ -192,7 +213,7 @@
             </div>
         </div>
     </section>    
-
+</section>
     
 
 </div>
