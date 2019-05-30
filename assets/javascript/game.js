@@ -67,6 +67,8 @@ $(".character").on("click",function(){
        $(this).appendTo(".defender");
        $(this).addClass("enemy");
        $(".btn-attack").on("click", attack);
+       console.log("This is enemy hp");
+       console.log(enemyHp);
    }
 });
 
@@ -77,13 +79,14 @@ enemyHp = parseInt(enemyHp);
 enemyAtk = parseInt(enemyAtk);
 berry = parseInt(berry);
 
-
+enemyHp -= userAtk;
 $(".result").html(" " +user +" did " +userAtk +" damage to " +enemy +". "+enemy +" counter " +enemyAtk +" damage to " +user);
+console.log("user attack");
 console.log(userAtk);
 userAtk += berry;
 console.log(userAtk);
 
-enemyHp -= userAtk;
+
 if (enemyHp <= 0) {
     $(".enemy").remove();
     $("btn-attack").off('click', attack);
