@@ -2,10 +2,14 @@ body {
     box-sizing: border-box;
     position:relative;
     background-image: url("../images/background.gif");
-    background-size: auto;
+    background-size: 100%;
+    z-index: -5;
+    
 }
-/* .grid {
-} */
+.grid {
+    font-family: 'Germania One', cursive;
+    color:white;
+}
 
 .container {
     top:0;
@@ -15,6 +19,9 @@ body {
 
 .logo-row {
     margin-top:10%;
+}
+#logo {
+    width:75%;
 }
 
 .mid-col {
@@ -35,7 +42,9 @@ body {
     position: absolute;
     margin: 20% 30%;
 }
-
+h2 {
+    font-family: 'Germania One', cursive;
+}
 .progress {
     text-align: center;
 }
@@ -49,12 +58,11 @@ body {
 }
 
 /* Character Select Screen */
-
 .character-screen {
     display:none;
 }
 
-img {
+.pokemon {
     width:100%;
     mix-blend-mode: multiply;
 }
