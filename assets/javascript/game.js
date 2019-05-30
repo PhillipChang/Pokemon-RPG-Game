@@ -19,10 +19,8 @@ $(".btn-start").on("click", function() {
     audioElement.play();
     $(".main-screen").fadeOut();
     $(".loading-screen").fadeIn();
-    $(".loading-screen").delay(1000).fadeOut();
-    $(".character-screen").delay(1000).fadeIn();
-    // $(".loading-screen").delay(5000).fadeOut();
-    // $(".character-screen").delay(7000).fadeIn();
+    $(".loading-screen").delay(5000).fadeOut();
+    $(".character-screen").delay(7000).fadeIn();
 });
 
 $(".character").on("click",function(){
