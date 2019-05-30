@@ -65,10 +65,28 @@ h2 {
 .pokemon {
     width:100%;
     mix-blend-mode: multiply;
+    text-align: center
+}
+
+.character {
+    margin: auto;
+}
+footer {
+    text-align: center;
+    font-size:20px;
 }
 
 /* Battle Screen */
 
 .battle-screen {
     display:none;
+}
+h3 {
+    color:red;
+}
+
+.stats{
+    background-color: lemonchiffon;
+    color: red;
+    width:25%;
 }

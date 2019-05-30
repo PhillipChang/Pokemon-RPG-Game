@@ -75,9 +75,9 @@
         <section class="character-screen">
             <div class="row character-select">
                     
-                    <section class="character" id="pikachu" data-health="120" data-attack="25" data-defend="10">
+                    <section class="character" id="pikachu" data-health="125" data-attack="10" data-defend="14">
                         <div class="ml-4 mb-3" style="max-width: 9rem;">
-                                <div class="border-0">Pikachu</div>
+                                <h2 class="border-0">Pikachu</h2>
                                 <div>
                                   <h5 class="card-title">
                                       <img src="assets/images/pikachu.png" class="pokemon" value="0" alt="pikachu">
@@ -87,9 +87,9 @@
                         </div>
                     </section>
                     
-                    <section  class= "character" id="squirtle" data-health="100" data-attack="20" data-defend="15">
+                    <section  class= "character ml-2" id="squirtle" data-health="120" data-attack="11" data-defend="15">
                             <div class="ml-4 mb-3" style="max-width: 9rem;">
-                                    <div class="border-0">Squirtle</div>
+                                    <h2 class="border-0">Squirtle</h2>
                                     <div>
                                         <h5 class="card-title">
                                             <img src="assets/images/squirtle.png" class="pokemon" value="1" alt="squirtle">
@@ -99,9 +99,9 @@
                              </div>
                     </section>
                         
-                    <section class= "character" id ="charmander" data-health="100" data-attack="15" data-defend="25">
+                    <section class= "character" id ="charmander" data-health="130" data-attack="9" data-defend="13">
                         <div class="border-0" style="max-width: 9rem;">
-                                <div class="border-0">Charmander</div>
+                                <h2 class="border-0">Charmander</h2>
                                 <div>
                                   <h5 class="card-title">
                                       <img src="assets/images/charmander.png" class="pokemon" id="charmander" value="2" alt="charmander">
@@ -111,9 +111,9 @@
                         </div>
                     </section>
 
-                    <section  class= "character" id="mewtwo" data-health="150" data-attack="30" data-defend="10">
+                    <section  class= "character" id="mewtwo" data-health="135" data-attack="8" data-defend="12">
                         <div class="border-0" style="max-width: 9rem;">
-                                <div class="border-0">Mewtwo</div>
+                                <h2 class="border-0">Mewtwo</h2>
                                 <div>
                                   <h5 class="card-title">
                                       <img src="assets/images/mewtwo-2.png" class="pokemon" value="3" alt="mewtwo">
@@ -128,7 +128,7 @@
             <!-- User Character -->
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Your Character</h2>
+                    <h1>Your Character</h1>
                     <div class="row">
                         <div class="col-md-4 user-char">
 
@@ -140,7 +140,7 @@
             <!-- Enemies to Attack -->
             <div class="row">
                     <div class="col-md-12">
-                        <h2>Enemies Available to Attack</h2>
+                        <h1>Enemies Available to Attack</h1>
                     </div>
                 </div>
                         <div class="row">
@@ -172,11 +172,11 @@
         <div class="row">
             <div class="col-md-6 user-char">
                 <h3>Your Pokemon</h3>
-                <p class="user-hp"></p>
+                <p> <h3 class="user-hp"></h3></p>
             </div>
                 <div class="col-md-6 ">
                     <h3>Defender</h3>
-                    <p class="enemy-hp"></p>
+                    <p> <h3 class="enemy-hp"></h3></p>
                     <div class="defender">
                     </div>
                 </div> 
@@ -194,7 +194,7 @@
             <div class="col-md-6">
                 <h3>Enemies Left to Attack</h3>
                 <div class="row">
-                        <div class="col-md-2 comp-char-1" style="max-width:9rem;">
+                        <div class="col-md-2 comp-char-1">
                         </div>
                         <div class="col-md-2 comp-char-2">
                             
@@ -209,10 +209,22 @@
   
     <!-- Attack Button -->
     <section class="battle-screen">
-        <div class="row attack-button">
-            <div class="col-md-4"></div>
+        <div class="row">
+            <div class="col-md-4">
+                <p class="stats">Wins:
+                    <span id="wins"></span>
+                </p>
+                <p class="stats">Losses:
+                    <span id="losses"></span>
+                </p>
+                <p class="stats">Enemies Defeated
+                    <span id="enemies-defeat"></span>
+                </p>
+            </div>
+            <div class="row attack-button">
             <div class="col-md-4">
                 <button type="button" class="btn-attack btn-danger btn-lg">Attack!</button>
+            </div>
             </div>
         </div>
     </section>    

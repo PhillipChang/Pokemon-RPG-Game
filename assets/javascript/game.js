@@ -1,9 +1,9 @@
 $(document).ready(function() {
 var userHp;
 var userAtk;
+var berry;
 var enemyHp;
 var enemyAtk;
-var enemyDef;
 var userChose = 0;
 var user;
 var enemy;
@@ -16,22 +16,23 @@ var attack;
 var audioElement = document.createElement("audio");
 audioElement.setAttribute("src", "assets/music/pokemon-song.MP3");
 $(".btn-start").on("click", function() {
+    audioElement.play();
     $(".main-screen").fadeOut();
     $(".loading-screen").fadeIn();
     $(".loading-screen").delay(1000).fadeOut();
     $(".character-screen").delay(1000).fadeIn();
     // $(".loading-screen").delay(5000).fadeOut();
     // $(".character-screen").delay(7000).fadeIn();
-    audioElement.play();
 });
 
 $(".character").on("click",function(){
-    if (userChose == 0) {
+    if (userChose === 0) {
         user = $(this).attr('id');
         userChose = 1;
         userHp = $(this).attr('data-health');
         userAtk = $(this).attr('data-attack');
         userDef = $(this).attr('data-defend');
+        berry = $(this).attr('data-attack');
         $(this).appendTo(".user-char");
         $(this).off('click');
     switch (user) {
@@ -58,60 +59,69 @@ $(".character").on("click",function(){
     }
     }
    
-   else if (userChose == 1) {
+   else if (userChose === 1) {
        enemy = $(this).attr('id');
        userChose = 2;
        enemyHp = $(this).attr('data-health');
-       enemyAtk = $(this).attr('data-attack');
-       enemyDef = $(this).attr('data-defend');
+       enemyAtk = $(this).attr('data-defend');
        $(this).appendTo(".defender");
        $(this).addClass("enemy");
-       $(".btn-attack").on('click', attack);
+       $(".btn-attack").on("click", attack);
    }
-})
+});
 
 function attack(){
 userAtk = parseInt(userAtk);
 userHp = parseInt(userHp);
 enemyHp = parseInt(enemyHp);
 enemyAtk = parseInt(enemyAtk);
+berry = parseInt(berry);
 
-userHp -= enemyDef;
+
+$(".result").html(" " +user +" did " +userAtk +" damage to " +enemy +". "+enemy +" counter " +enemyAtk +" damage to " +user);
+console.log(userAtk);
+userAtk += berry;
+console.log(userAtk);
+
 enemyHp -= userAtk;
-// add new variable to useratk
 if (enemyHp <= 0) {
     $(".enemy").remove();
+    $("btn-attack").off('click', attack);
     userChose = 1;
-    enemiesDefeated++;
+    enemiesDefeated += 1;
     enemyHp = 0;
     enemyAtk = 0;
-    enemyDef = 0;
+    console.log("enemy defeated");
+    console.log(enemiesDefeated);
+    $("#enemies-defeat").text(enemiesDefeated);
 }
-
-if (enemiesDefeated == 3 ) {
-    $(".result").html("You have defeated all of the trainer's pokemon! You are the pokemon master!");
-    win++;
-}
-$(".enemy-hp").html(enemyHp);
-console.log(userHp);
-$(".user-hp").html(userHp);
+userHp -= enemyAtk;
+$(".enemy-hp").text(enemyHp);
+$(".user-hp").text(userHp);
 
 
-$(".result").html(" " +user +" did " +userAtk +" damage to " +enemy +". "+enemy +" counter " +enemyDef +" damage to " +user);
 
-console.log(userHp);
 if (userHp <= 0) {
     $(".btn-attack").off("click");
     $(".result").html("You Lost! Better luck next time!");
     losses++;
+    $("#losses").text(losses);
+}
+if (enemiesDefeated === 3 ) {
+    $(".result").html("You have defeated all of the trainer's pokemon! You are the pokemon master!");
+    $("btn-attack").off('click');
+    win++;
+    $("#wins").text(win);
 }
 }
 
-var audioElement = document.createElement("audio");
-audioElement.setAttribute("src", "assets/music/battle-song.MP3");
+var audioBattle = document.createElement("audio");
+audioBattle.setAttribute("src", "assets/music/battle-song.MP3");
 $(".btn-battle").on("click", function() {
     $(".character-screen").fadeOut();
     $(".battle-screen").fadeIn();
-    audioElement.play();
+    audioElement.pause();
+    audioBattle.play();
+    audioBattle.volume= 0.5;
 });
 });
