@@ -66,12 +66,11 @@ $(".character").on("click",function(){
        enemyAtk = $(this).attr('data-defend');
        $(this).appendTo(".defender");
        $(this).addClass("enemy");
-       $(".btn-attack").on("click", attack);
        console.log("This is enemy hp");
        console.log(enemyHp);
    }
 });
-
+$(".btn-attack").on("click", attack);
 function attack(){
 userAtk = parseInt(userAtk);
 userHp = parseInt(userHp);
@@ -83,13 +82,13 @@ enemyHp -= userAtk;
 $(".result").html(" " +user +" did " +userAtk +" damage to " +enemy +". "+enemy +" counter " +enemyAtk +" damage to " +user);
 console.log("user attack");
 console.log(userAtk);
-userAtk += berry;
+userAtk = berry + userAtk;
+console.log("this is new user attack")
 console.log(userAtk);
 
 
 if (enemyHp <= 0) {
     $(".enemy").remove();
-    $("btn-attack").off('click', attack);
     userChose = 1;
     enemiesDefeated += 1;
     enemyHp = 0;
@@ -127,4 +126,9 @@ $(".btn-battle").on("click", function() {
     audioBattle.play();
     audioBattle.volume= 0.5;
 });
+
+$(".btn-start-over").on("click", function(){
+    location.reload();
+});
+
 });
