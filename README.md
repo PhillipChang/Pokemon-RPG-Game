@@ -1,5 +1,7 @@
 # Pokemon-RPG-Game
 
+[Playable Link](https://phillipchang.github.io/Pokemon-RPG-Game/)
+
 ### Main-Screen
 ![Main-Screen](assets/images/main-page.png)
 
