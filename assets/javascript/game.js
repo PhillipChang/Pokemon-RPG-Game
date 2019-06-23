@@ -34,25 +34,25 @@ $(".character").on("click",function(){
         $(this).appendTo(".user-char");
         $(this).off('click');
     switch (user) {
-        case 'pikachu':
-            $("#squirtle").appendTo(".comp-char-1");
-            $("#charmander").appendTo(".comp-char-2");
+        case 'moltres':
+            $("#articuno").appendTo(".comp-char-1");
+            $("#zaptos").appendTo(".comp-char-2");
             $("#mewtwo").appendTo(".comp-char-3");
             break;
-        case 'squirtle':
-            $("#pikachu").appendTo(".comp-char-1");
-            $("#charmander").appendTo(".comp-char-2");
+        case 'articuno':
+            $("#moltres").appendTo(".comp-char-1");
+            $("#zaptos").appendTo(".comp-char-2");
             $("#mewtwo").appendTo(".comp-char-3");
             break;
-        case 'charmander':
-           $("#pikachu").appendTo(".comp-char-1");
-           $("#squirtle").appendTo(".comp-char-2");
+        case 'zaptos':
+           $("#moltres").appendTo(".comp-char-1");
+           $("#articuno").appendTo(".comp-char-2");
            $("#mewtwo").appendTo(".comp-char-3");
            break;
         case 'mewtwo':
-           $("#pikachu").appendTo(".comp-char-1");
-           $("#squirtle").appendTo(".comp-char-2");
-           $("#charmander").appendTo(".comp-char-3");
+           $("#moltres").appendTo(".comp-char-1");
+           $("#articuno").appendTo(".comp-char-2");
+           $("#zaptos").appendTo(".comp-char-3");
            break;
     }
     }
