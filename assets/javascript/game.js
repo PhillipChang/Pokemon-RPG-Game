@@ -32,6 +32,7 @@ $(".character").on("click",function(){
         userAtk = $(this).attr('data-attack');
         userDef = $(this).attr('data-defend');
         berry = $(this).attr('data-attack');
+        $(".user-hp").append(userHp);
         $(this).appendTo(".user-char");
         $(this).off('click');
     switch (user) {
@@ -63,10 +64,9 @@ $(".character").on("click",function(){
        userChose = 2;
        enemyHp = $(this).attr('data-health');
        enemyAtk = $(this).attr('data-defend');
+       $(".enemy-hp").append(enemyHp);
        $(this).appendTo(".defender");
        $(this).addClass("enemy");
-       console.log("This is enemy hp");
-       console.log(enemyHp);
    }
    $(".character").off("click");
 });
@@ -94,7 +94,7 @@ if (enemyHp <= 0) {
     $(".enemy").remove();
     userChose = 1;
     enemiesDefeated += 1;
-    enemyHp = 0;
+    enemyHp = "";
     enemyAtk = 0;
     console.log("enemy defeated");
     console.log(enemiesDefeated);
