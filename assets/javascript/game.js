@@ -23,6 +23,7 @@ $(".btn-start").on("click", function() {
     $(".character-screen").delay(7000).fadeIn();
 });
 
+function charSelect(){
 $(".character").on("click",function(){
     if (userChose === 0) {
         user = $(this).attr('id');
@@ -68,6 +69,8 @@ $(".character").on("click",function(){
        console.log(enemyHp);
    }
 });
+}
+charSelect();
 $(".btn-attack").on("click", attack);
 function attack(){
 userAtk = parseInt(userAtk);
@@ -118,11 +121,16 @@ if (enemiesDefeated === 3 ) {
 var audioBattle = document.createElement("audio");
 audioBattle.setAttribute("src", "assets/music/battle-song.MP3");
 $(".btn-battle").on("click", function() {
+    if (userChose === 0){
+        alert("You have not made a selection. Please select a pokemon.");
+    }
+    else{
     $(".character-screen").fadeOut();
     $(".battle-screen").fadeIn();
     audioElement.pause();
     audioBattle.play();
     audioBattle.volume= 0.5;
+    }
 });
 
 $(".btn-start-over").on("click", function(){
