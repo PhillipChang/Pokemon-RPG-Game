@@ -22,6 +22,7 @@ body {
 }
 #logo {
     width:75%;
+    margin:10%;
 }
 
 .mid-col {
@@ -32,6 +33,14 @@ body {
     margin-top: 8%;
 }
 
+.btn-danger {
+    font-size:3.0rem;
+    border-radius:3.3rem;
+    margin:-10%;
+    padding: 2.5rem 3.0rem;
+    line-height: 0.5;
+}
+
 /* Loading screen */
 .loading-row {
     text-align: center;
@@ -40,7 +49,13 @@ body {
 .loading-screen {
     display:none;
     position: absolute;
-    margin: 20% 30%;
+    margin: 25%;
+}
+
+.load-logo{
+margin-bottom: 3.5rem;
+font-size: 4rem;
+margin-left:-22%;
 }
 h2 {
     font-family: 'Germania One', cursive;
@@ -60,11 +75,15 @@ h2 {
 /* Character Select Screen */
 .character-screen {
     display:none;
+    margin-top:13%;
 }
-
-.pokemon {
+.character-select-row{
+    height:100%;    
     width:100%;
-    mix-blend-mode: multiply;
+    display:flex;
+}
+.pokemon {
+    width:60%;
     text-align: center
 }
 
@@ -73,11 +92,14 @@ h2 {
 }
 footer {
     text-align: center;
-    font-size:20px;
+    font-size: 3rem;
 }
-.modal{
-    color:black;
+
+.enemy-sec {
+    display:flex;
+    flex-direction:row;
 }
+
 
 
 

@@ -18,9 +18,10 @@ audioElement.setAttribute("src", "assets/music/pokemon-song.MP3");
 $(".btn-start").on("click", function() {
     audioElement.play();
     $(".main-screen").fadeOut();
-    $(".loading-screen").fadeIn();
-    $(".loading-screen").delay(5000).fadeOut();
-    $(".character-screen").delay(7000).fadeIn();
+    // $(".loading-screen").fadeIn();
+    // $(".loading-screen").delay(5000).fadeOut();
+    // $(".character-screen").delay(7000).fadeIn();
+    $(".character-screen").delay(000).fadeIn();
 });
 
 function charSelect(){
@@ -69,8 +70,9 @@ $(".character").on("click",function(){
        $(this).addClass("enemy");
    }
    $(".character").off("click");
-});
 
+});
+$(".btn-attack").on("click",attack);
 }
 charSelect();
 $(".btn-attack").on("click", attack);
@@ -92,6 +94,7 @@ console.log(userAtk);
 
 if (enemyHp <= 0) {
     $(".enemy").remove();
+    $(".btn-attack").off("click");
     userChose = 1;
     enemiesDefeated += 1;
     enemyHp = "";
