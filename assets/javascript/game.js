@@ -68,7 +68,9 @@ $(".character").on("click",function(){
        console.log("This is enemy hp");
        console.log(enemyHp);
    }
+   $(".character").off("click");
 });
+
 }
 charSelect();
 $(".btn-attack").on("click", attack);
@@ -97,6 +99,7 @@ if (enemyHp <= 0) {
     console.log("enemy defeated");
     console.log(enemiesDefeated);
     $("#enemies-defeat").text(enemiesDefeated);
+    charSelect();
 }
 userHp -= enemyAtk;
 $(".enemy-hp").text(enemyHp);
@@ -122,11 +125,13 @@ var audioBattle = document.createElement("audio");
 audioBattle.setAttribute("src", "assets/music/battle-song.MP3");
 $(".btn-battle").on("click", function() {
     if (userChose === 0){
-        alert("You have not made a selection. Please select a pokemon.");
+        alert("You have not selected a pokemon!")
     }
+    
     else{
     $(".character-screen").fadeOut();
     $(".battle-screen").fadeIn();
+    charSelect();
     audioElement.pause();
     audioBattle.play();
     audioBattle.volume= 0.5;
