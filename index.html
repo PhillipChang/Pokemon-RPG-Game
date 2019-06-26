@@ -78,25 +78,30 @@
                     <section class="character" id="moltres" data-health="120" data-attack="8" data-defend="10">
                                 <h2 class="border-0">Moltres</h2>
                                       <img src="assets/images/moltres.gif" class="pokemon" value="0" alt="moltres">
-                                <footer>120</footer>
+                                      <p class="stat">Health: 120<p>
+                                      <p class="stat">Attack: 8<p>
                     </section>
                     
-                    <section  class= "character" id="articuno" data-health="100" data-attack="25" data-defend="5">
+                    <section  class= "character" id="articuno" data-health="90" data-attack="25" data-defend="5">
                                     <h2>Articuno</h2>
                                             <img src="assets/images/articuno.gif" class="pokemon" value="1" alt="articuno">
-                                    <footer>100</footer>
+                                    <p class="stat">Health: 90<p>
+                                    <p class="stat">Attack: 25<p>
+                                    
                     </section>
                         
                     <section class= "character" id ="zaptos" data-health="150" data-attack="10" data-defend="20">
                                 <h2>Zaptops</h2>
                                       <img src="assets/images/zaptos.gif" class="pokemon" id="zaptos" value="2" alt="zaptos">
-                                <footer>150</footer>
+                                      <p class="stat">Health: 150<p>
+                                      <p class="stat">Attack: 10<p>
                     </section>
 
                     <section  class= "character" id="mewtwo" data-health="160" data-attack="5" data-defend="25">
                                 <h2>Mewtwo</h2>
                                       <img src="assets/images/mewtwo.gif" class="pokemon" value="3" alt="mewtwo">
-                                <footer>160</footer>
+                                <p class="stat">Health: 160<p>
+                                <p class="stat">Attack: 5<p>
                     </section>
                     
                 </div>
@@ -104,20 +109,16 @@
 
             <!-- User Character -->
             <div class="row">
-                <div class="col-md-12">
-                    <h1>Your Character</h1>
-                        <div class=" row col-md-12 user-char">
-
-                        </div>
+                <div class="col-md-3">
                 </div>
-            </div>
+                <div class="trainer-pokemon col-md-2">
+                    <h1>Your Pokemon</h1>
+                    <div class="user-char" id="user-pokemon"></div>
+                </div>
 
             <!-- Enemies to Attack -->
-            <div class="row">
-                    <div class="col-md-12">
-                        <h1>Enemies Available to Attack</h1>
-                    </div>
-                </div>
+                    <div class="enemies col-md-6">
+                        <h1>Opponent Pokemons to Attack</h1>
                         <div class="enemy-sec">
                             <div class="comp-char-1">
                             </div>
@@ -126,15 +127,12 @@
                             <div class="comp-char-3">                               
                             </div>
                         </div>
-
+                    </div>
+            </div>
         <!-- Battle Button -->
         <section class="battle">
         <div class="row battle-button">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
-                <button type="button" class="btn-battle btn-danger btn-lg">Battle!</button>
-            </div>
-            <div class="col-md-4"></div>
+                <button type="button" class="btn-battle btn-danger">Battle!</button>
         </div>
         </section>
                 
@@ -142,32 +140,42 @@
 
     <!-- Battle Screen -->
     <section class="battle-screen">
-        <div class="row">
-            <div class="col-md-6 user-char">
-                <h3>Your Pokemon</h3>
-                <h4>Health</h4>
-                <p> <h3 class="user-hp"></h3></p>
+        <div class="row">    
+        <div class="col-md-5 count">
+                    <p class="stats">Wins:
+                        <span id="wins"></span>
+                    </p>
+                    <p class="stats">Losses:
+                        <span id="losses"></span>
+                    </p>
+                    <p class="stats">Enemies Defeated
+                        <span id="enemies-defeat"></span>
+                    </p>
             </div>
-                <div class="col-md-6 ">
-                    <h3>Defender</h3>
-                    <h4>Enemy Health</h4>
-                    <p> <h3 class="enemy-hp"></h3></p>
+        </div>
+        <div class="battle-row row">
+                        <div class="attack-button">
+                        </div>
+            <div class="col-md-2 user-char" id="user-pokemon-battle">
+                <h3>Your Pokemon</h3>
+                <h3 class="user-hp"></h3>
+            </div>
+                <div class="col-md-2 enemy-char">
+                    <h3>Opponent</h3>
+                    <h3 class="enemy-hp"></h3>
                     <div class="defender">
                     </div>
                 </div> 
         </div>
-
-        <div class="row">
-                <div class="col-md-6">
+        <div class="result-row">
+                <div class="col-md-2">
                     <h3>Results</h3>
-                    <div class="row">
-                            <div class="col-md-4">
-                                <h3 class="result"></h3>
-                            </div>
-                        </div>
+                        <p class="result">Start by Selecting an Opponent</p>
+                        <button type="button" class="btn-start-over btn-info btn-lg ml-3">Restart!</button> 
                 </div> 
-            <div class="col-md-6">
-                <h3>Enemies Left to Attack</h3>
+        </div>
+        <div class="col-md-6 enemy-left">
+                <h3>Opponent Pokemon to Attack</h3>
                 <div class="row">
                         <div class="comp-char-1">
                         </div>
@@ -179,34 +187,7 @@
                         </div>
                     </div>
             </div>
-        </div>
-   
-  
-    <!-- Attack Button -->
-    <section class="battle-screen">
-        <div class="row">
-            <div class="col-md-4">
-                <p class="stats">Wins:
-                    <span id="wins"></span>
-                </p>
-                <p class="stats">Losses:
-                    <span id="losses"></span>
-                </p>
-                <p class="stats">Enemies Defeated
-                    <span id="enemies-defeat"></span>
-                </p>
-            </div>
-            <div class="row attack-button">
-            <div class="col-md-4">
-                <button type="button" class="btn-attack btn-danger btn-lg">Attack!</button>
-                
-            </div>
-            <div class="col-md-4">
-                <button type="button" class="btn-start-over btn-info btn-lg ml-3">Restart!</button> 
-            </div>
-            </div>
-        </div>
-    </section>    
+    
 </section>
     
 
