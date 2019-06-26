@@ -2,14 +2,8 @@
 
 [Playable Link](https://phillipchang.github.io/Pokemon-RPG-Game/)
 
-### Main-Screen
-![Main-Screen](assets/images/main-page.png)
-
-### Character Select Screen
-![Character-Select-Screen](assets/images/character-select.png)
-
-### Battle Screen
-![Battle-Screen](assets/images/battle-page.png)
+### Website
+![Main-Screen](assets/images/website.gif)
 
 ## Description
 
